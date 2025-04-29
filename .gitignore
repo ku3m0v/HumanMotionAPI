@@ -1,0 +1,6 @@
+*.zip
+output/
+__pycache__/
+.venv/
+venv/
+.idea/
