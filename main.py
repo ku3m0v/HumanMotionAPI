@@ -8,6 +8,10 @@ import io
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"message": "Hello from Azure!"}
+
 @app.post("/upload-csv/")
 async def create_plot(file: UploadFile = File(...)):
     df = pd.read_csv(file.file)
